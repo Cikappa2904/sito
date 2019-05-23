@@ -1,8 +1,17 @@
 
+
 .Titoli{
 
-color: rgb(255, 0, 0);
-font-family: 'Righteous', cursive;
-font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+    margin: auto;
+
 }
 
+.TopBar{
+
+background-color: rgb(146, 17, 17);
+height: 40px;
+
+}
