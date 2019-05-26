@@ -15,3 +15,10 @@ background-color: rgb(146, 17, 17);
 height: 40px;
 
 }
+
+.LinkNoUnderline{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+
+}
