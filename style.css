@@ -24,9 +24,9 @@ height: 40px;
 
 }
 
-a:hover {
+p:hover {
     color: rgb(255, 255, 255);
-  }
+}
 
 
 
@@ -43,4 +43,12 @@ i:hover{
     
 
 }  
+
+.ElementiLista{
+
+    font-size: 20px;
+    font-family: Ubuntu;
+
+
+}
 
