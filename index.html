@@ -7,33 +7,48 @@
     <title>Cikappa2904</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 <body>
     
-<!-- TopBar -->
 
-    <h1 class="TopBar">
-        <a href="index.html">
 
-            <img  src="images/logo_sec2.png" style="height:30px;margin-top:5px;margin-left: 5px" alt="Cikappa2904 Logo">
-        
-        </a> 
-            <a class="LinkNoUnderline" href="pixelmon.html">
-                <p  style="font-family: Roboto; font-size: 20px;display: inline;">Pixelmon</p>
+<!-- sidebar  -->
+
+<nav>
+    
+    <div class="container">
+        <a class="brand-logo center"><img src="images/logo_sec2.png" alt="Cikappa2904logo" height = 50px; class="moveimage" href="index.html"></a>
+        <a href="#" class="sidebar-trigger" data-target="mobile-links" >
+            <i class="material-icons" >menu</i>
         </a>
-        
-</h1>
-
-
-
-<!-- TopBar -->
-
+        <ul class="right">
+            <li><a href="#">Pixelmon</a></li>
+    
+        </ul>
+    
+    </div> 
 
     
-    <p style="font-family: 'Ubuntu', sans-serif;">
+</nav>
+
+<ul class="sidenav" id="mobile-links">
+
+    <li><a href="#">Pixelmon</a></li>
+
+</ul>
+
+
+<!-- sidebar  -->
+<br>
+
+    <p style="font-family: 'Ubuntu', sans-serif; color:#000000">
         Ciao, mi chamo Claudio, ma su internet mi faccio conoscere come 
             <b>Cikappa2904.</b>
             <br>
@@ -49,6 +64,12 @@
     <script src="https://apis.google.com/js/platform.js"></script>
 
 <div class="g-ytsubscribe" data-channelid="UChUpJC2Y_w_TNcPDucuVxtg" data-layout="default" data-count="default"></div>
+
+
+
+
+
+
     
  <!-- BottomBar -->   
     <br>
@@ -77,5 +98,8 @@
 
     </a>
 <!-- BottomBar -->   
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

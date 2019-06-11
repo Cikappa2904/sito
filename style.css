@@ -52,3 +52,16 @@ i:hover{
 
 }
 
+.moveimage
+{
+    position: relative;
+    top: 6px;
+    
+}
+
+.moveMenu{
+
+
+    position: relative;
+    left: -40px;
+}
