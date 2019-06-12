@@ -59,16 +59,11 @@ i:hover{
     
 }
 
-.moveMenu{
 
 
-    position: relative;
-    left: -40px;
-}
-
-moveMenu:hover{
-
-
-
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     
 }
