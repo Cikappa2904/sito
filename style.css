@@ -70,3 +70,15 @@ i:hover{
     
 }
 
+
+.right1 {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    
+    padding: 10px;
+} 
+
+.carda {
+    width:320px;
+}
