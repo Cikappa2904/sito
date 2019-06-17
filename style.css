@@ -82,3 +82,33 @@ i:hover{
 .carda {
     width:320px;
 }
+
+.content {
+    max-width: 720px;
+    margin: auto;
+
+}
+
+.inner-width{
+
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+
+}
+
+.section-title{
+
+    text-align: center;
+    font-size: 30px;
+}
+
+.services-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
