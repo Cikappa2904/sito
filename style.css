@@ -109,5 +109,17 @@ i:hover{
 .section-title{
 
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
+}
+
+.Partecipanti a{
+
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.Partecipanti a:hover{
+
+    opacity: 0.5;
+
 }
