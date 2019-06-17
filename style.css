@@ -104,11 +104,3 @@ i:hover{
     text-align: center;
     font-size: 30px;
 }
-
-.services-container{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
