@@ -80,9 +80,16 @@ i:hover{
 } 
 
 .carda {
-    width:320px;
+    max-width: 720px;
+    margin: auto;
 }
 
+.cardb{
+
+    width:320px;
+
+
+}
 .content {
     max-width: 720px;
     margin: auto;
