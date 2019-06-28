@@ -24,10 +24,6 @@ height: 40px;
 
 }
 
-p:hover {
-    color: rgb(255, 255, 255);
-}
-
 
 
 i{
@@ -119,6 +115,18 @@ i:hover{
 }
 
 .Partecipanti a:hover{
+
+    opacity: 0.5;
+
+}
+
+.optrans{
+
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.optrans:hover{
 
     opacity: 0.5;
 
