@@ -76,8 +76,9 @@ i:hover{
 } 
 
 .carda {
-    max-width: 720px;
+    max-width: 300px;
     margin: auto;
+    float: left;
 }
 
 .cardb{
@@ -131,3 +132,4 @@ i:hover{
     opacity: 0.5;
 
 }
+
