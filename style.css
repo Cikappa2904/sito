@@ -133,3 +133,18 @@ i:hover{
 
 }
 
+.redtitle{
+
+color: #FF0000;
+font-size: 20px;
+text-align: center;
+
+
+}
+
+.center {
+    margin: auto;
+    
+    
+    padding: 10px;
+  }
