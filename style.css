@@ -87,6 +87,15 @@ i:hover{
 
 
 }
+
+.cardc{
+
+    width:450px;
+    height: 400px; /* Your height here */
+   
+
+
+}
 .content {
     max-width: 720px;
     margin: auto;
