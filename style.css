@@ -76,9 +76,9 @@ i:hover{
 } 
 
 .carda {
-    max-width: 300px;
+    max-width: 430px;
     margin: auto;
-    float: left;
+    float: center;
 }
 
 .cardb{
@@ -91,7 +91,7 @@ i:hover{
 .cardc{
 
     width:450px;
-    height: 400px; /* Your height here */
+    max-height: 500px; /* Your height here */
    
 
 
@@ -158,3 +158,5 @@ text-align: center;
     padding: 10px;
   }
 
+
+ 
