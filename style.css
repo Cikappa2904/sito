@@ -158,5 +158,13 @@ text-align: center;
     padding: 10px;
   }
 
+iframe{
 
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
+    background-color: #777;
+    display: block;
+    
+}
  

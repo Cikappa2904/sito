@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body style = "background-color: #87170c">
     
 <!-- navbar  -->
 
@@ -45,49 +46,72 @@
 <!-- navbar  -->
 <div class="content">
 
-<h2 style="text-align: center;">I miei ultimi video</h2>
-<p style=" display:block;">(i video potrebbero non funzionare in questa pagina, in tal caso cliccare sul bottone YouTube(o nel titolo del video da cellulare) nel video per guardarlo direttamente su YouTube)</p>
+<h2 style="text-align: center; color:white">I miei ultimi video</h2>
+<p style=" display:block; color:white">(i video potrebbero non funzionare in questa pagina, in tal caso cliccare sul bottone YouTube(o nel titolo del video da cellulare) nel video per guardarlo direttamente su YouTube)</p>
 
 
-    <div  class="carda" >
-        <div class="col s12 m6">
-          <div class="card red darken-1">
-            <div class="card-content white-text center-allign">
-              <script src="https://apis.google.com/js/platform.js"></script>
-              <iframe width="256" height="144" src="https://www.youtube.com/embed/UXevCsqf2qw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <br>
-            </div>
-            <div class="card-action">
-                <div class="g-ytsubscribe" data-channelid="UChUpJC2Y_w_TNcPDucuVxtg" data-layout="full" data-count="default"></div>
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    <br>
 
-      <div  class="carda">
-        <div class="col s12 m6">
-          <div class="card light-blue darken-1" >
-            <div class="card-content white-text">
-              <script src="https://apis.google.com/js/platform.js"></script>
-              <iframe width="256" height="144" src="https://www.youtube.com/embed/ff-r2-zAAvQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <br>
-            </div>
-            <div class="card-action">
-                <div class="g-ytsubscribe" data-channelid="UCVrqEID_IoP-dIZGabAJDvQ" data-layout="full" data-count="default"></div>
-                
-            </div>
-          </div>
-        </div>
-      </div>
+<a class="waves-effect waves-light btn-large red" onclick="hideYoungTech()" >Cikappa2904</a>
+<a class="waves-effect waves-light btn-large blue" onclick="hideCikappa()" style="float: right">YoungTech</a>
+<br>
+
+
+
+<br>
+    <iframe id = "youngtech"  style="display:none" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+
+    <iframe id = "cikappa" class="latestVideoEmbed" vnum='1' cid="UChUpJC2Y_w_TNcPDucuVxtg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
   
 
     </div>
 
-</div>
 
 
+
+<script>
+
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+function loadVideo(iframe){
+    $.getJSON( reqURL + iframe.getAttribute('cid'),
+      function(data) {
+         var videoNumber = (iframe.getAttribute('vnum')?Number(iframe.getAttribute('vnum')):0);
+        console.log(videoNumber);
+         var link = data.items[videoNumber].link;
+         id = link.substr(link.indexOf("=") + 1);  
+         iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=1");
+      }
+   );
+}
+var iframes = document.getElementsByClassName('latestVideoEmbed');
+for (var i = 0, len = iframes.length; i < len; i++){
+       loadVideo(iframes[i]);
+}
+var youngtech = document.getElementById("youngtech")
+var cikappa = document.getElementById("cikappa")
+
+function hideCikappa(){
+
+
+cikappa.style.display = "none";
+youngtech.style.display = "block";
+document.body.style.backgroundColor = "#007eef"
+}
+
+
+
+function hideYoungTech(){
+  
+  cikappa.style.display = "block";
+youngtech.style.display = "none";
+
+document.body.style.backgroundColor = "#85170c"
+
+
+}
+
+
+// "width: 0; height: 0; border: 0; border: none; position: absolute;"
+
+</script>
 
 </body>
