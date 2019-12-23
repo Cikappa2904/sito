@@ -71,9 +71,9 @@ praticamente quello che mi passa per la testa sul momento.</div>
     
     
     <br>
-        <iframe id = "youngtech"  style="display:none" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+        <iframe id = "youngtech"  style="display:none" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ" onload="this.width=screen.width-100"; height="340" frameborder="0" allowfullscreen></iframe>
     
-        <iframe id = "cikappa" class="latestVideoEmbed" vnum='1' cid="UChUpJC2Y_w_TNcPDucuVxtg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+        <iframe id = "cikappa"  class="latestVideoEmbed" vnum='1' cid="UChUpJC2Y_w_TNcPDucuVxtg" onload="this.width=screen.width" height="340" frameborder="0" allowfullscreen></iframe>
       
     
         </div>
@@ -82,7 +82,13 @@ praticamente quello che mi passa per la testa sul momento.</div>
     
     
     <script>
-    
+
+    if (screen.width < 1280){
+
+        yt.style.width = screen.width-100;
+
+    }
+
     var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
     function loadVideo(iframe){
         $.getJSON( reqURL + iframe.getAttribute('cid'),
@@ -101,6 +107,7 @@ praticamente quello che mi passa per la testa sul momento.</div>
     }
     var youngtech = document.getElementById("youngtech")
     var cikappa = document.getElementById("cikappa")
+    var yt = document.getElementbyClass("latestVideoEmbed")
     
     function hideCikappa(){
     
@@ -108,6 +115,7 @@ praticamente quello che mi passa per la testa sul momento.</div>
     cikappa.style.display = "none";
     youngtech.style.display = "block";
     document.body.style.backgroundColor = "#007eef"
+
     }
     
     
@@ -116,11 +124,13 @@ praticamente quello che mi passa per la testa sul momento.</div>
       
       cikappa.style.display = "block";
     youngtech.style.display = "none";
-    
+    youngtech.muted=true;
+    cikappa.muted=false;
     document.body.style.backgroundColor = "#85170c"
     
     
     }
+    
     
     
     // "width: 0; height: 0; border: 0; border: none; position: absolute;"

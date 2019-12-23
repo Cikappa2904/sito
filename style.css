@@ -14,6 +14,7 @@ background-color: #85170c;
 
 }
 
+
 .TopBar{
 
 background-color: rgb(146, 17, 17);
@@ -104,6 +105,7 @@ i:hover{
 .content {
     max-width: 720px;
     margin: auto;
+    color:white;
 
 }
 
