@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    
 </head>
 <body>
     
@@ -25,24 +27,31 @@
     
     <div class="nav-wrapper" >
        
-        <a class="brand-logo left" href="index.html" ><img src="images/logo_sec2.png" alt="Cikappa2904logo" height = 50px; class="moveimage" ></a>
+        <a class="brand-logo" class="navbar" href="index.html" ><img src="images/logo_sec2.png" alt="Cikappa2904logo" height = auto; class="moveimage" style="width:50px"></a>
                     
+       <a href="#" class="sidenav-trigger" data-target="mobile-links">
+           <i class="material-icons">menu</i>
+        </a>
+       <ul  class="right hide-on-med-and-down" >
+        <li><a href="social.html" class="navbar" >Social</a></li>
+        <li><a href="pixelmon.html" class="navbar" >Pixelmon</a></li>
+        <li><a href="report.html" class="navbar" >Riporta un problema</a></li>
+        
+
+    </ul>
+
+
       
-        <ul id="nav-mobile" class="right" >
-            <li><a href="social.html" >Social</a></li>
-            <li><a href="pixelmon.html" >Pixelmon</a></li>
-            <li><a href="report.html" >Riporta un problema</a></li>
-            
-    
-        </ul>
-    
     </div> 
 
     
 </nav>
 
-
-
+<ul class="sidenav" id="mobile-links">
+    <li><a href="social.html" class="navbar" >Social</a></li>
+    <li><a href="pixelmon.html" class="navbar" >Pixelmon</a></li>
+    <li><a href="report.html" class="navbar" >Riporta un problema</a></li>
+</ul>
 <!-- navbar  -->
 <div class="content">
 
@@ -59,7 +68,7 @@ praticamente quello che mi passa per la testa sul momento.</div>
 
 <div class="content">
 
-    <h2 style="text-align: center; color:white">I miei ultimi video</h2>
+    <h3 style="text-align: center; color:white; font-size:20wm" >I miei ultimi video</h2>
     <p style=" display:block; color:white">(i video potrebbero non funzionare in questa pagina, in tal caso cliccare sul bottone YouTube(o nel titolo del video da cellulare) nel video per guardarlo direttamente su YouTube)</p>
     
     
@@ -75,7 +84,8 @@ praticamente quello che mi passa per la testa sul momento.</div>
     
         <iframe id = "cikappa"  class="latestVideoEmbed" vnum='1' cid="UChUpJC2Y_w_TNcPDucuVxtg" width="320px" height="180px"  frameborder="0" allowfullscreen></iframe>
       
-    
+    <a href="#" id="ytcom">Guardalo su youtube.com</a>
+
         </div>
     
     
@@ -85,6 +95,7 @@ praticamente quello che mi passa per la testa sul momento.</div>
 
    
     var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+    var ytcom = document.getElementById("ytcom");
     function loadVideo(iframe){
         $.getJSON( reqURL + iframe.getAttribute('cid'),
           function(data) {
@@ -92,7 +103,8 @@ praticamente quello che mi passa per la testa sul momento.</div>
             console.log(videoNumber);
              var link = data.items[videoNumber].link;
              id = link.substr(link.indexOf("=") + 1);  
-             iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=1");
+             iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=0");
+             
           }
        );
     }
@@ -103,14 +115,19 @@ praticamente quello che mi passa per la testa sul momento.</div>
     var youngtech = document.getElementById("youngtech")
     var cikappa = document.getElementById("cikappa")
     var yt = document.getElementbyClass("latestVideoEmbed")
-    
+    var a = document.getElementbyId("ytcom")
+    var link;
     function hideCikappa(){
     
     
     cikappa.style.display = "none";
     youngtech.style.display = "block";
     document.body.style.backgroundColor = "#007eef"
-
+    link = youngtech.getAttribute("src");
+    link = link.replace('https://youtube.com/embed/', '')
+    link = link.replace('?controls=0&autoplay=0', '')
+    console.log(link)
+    a.setAttribute("href", "https://youtube.com/watch?v=" + link)
     }
     
     
@@ -122,18 +139,39 @@ praticamente quello che mi passa per la testa sul momento.</div>
     youngtech.muted=true;
     cikappa.muted=false;
     document.body.style.backgroundColor = "#85170c"
+
+    link = cikappa.getAttribute("src");
+    link = link.replace('https://youtube.com/embed/', '')
+    link = link.replace('?controls=0&autoplay=0', '')
+    console.log(link)
+    a.setAttribute("href", "https://youtube.com/watch?v=" + link)
     
     
     }
     
-   
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+  
+
+        
     // "width: 0; height: 0; border: 0; border: none; position: absolute;"
     
-    </script>
-    
+  
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+    $('.sidenav').sidenav();
+
+    })
+</script>
+
 </body>
 </html>

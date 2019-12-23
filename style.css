@@ -58,11 +58,10 @@ i:hover{
 {
     position: relative;
     top: 6px;
-    left: 5px;
+    left: 6px;
     
     
 }
-
 
 
 .center {
@@ -103,8 +102,9 @@ i:hover{
 
 }
 .content {
-    max-width: 620px;
+    max-width: 720px;
     margin: auto;
+    
     color:white;
 
 }
@@ -174,3 +174,9 @@ iframe{
     
 }
  
+@media screen and (max-width: 800px) {
+    .navbar {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      
+    }
+  }
