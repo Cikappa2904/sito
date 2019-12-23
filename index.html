@@ -80,17 +80,14 @@ praticamente quello che mi passa per la testa sul momento.</div>
     
     
     <br>
-        <iframe id = "youngtech"  style="display:none" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ" width="320px" height="180px"  frameborder="0" allowfullscreen></iframe>
-    
-        <iframe id = "cikappa"  class="latestVideoEmbed" vnum='1' cid="UChUpJC2Y_w_TNcPDucuVxtg" width="320px" height="180px"  frameborder="0" allowfullscreen></iframe>
-      
-    <a href="#" id="ytcom">Guardalo su youtube.com</a>
-
+        <!-- <iframe id = "youngtech"  style="display:none" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ" width="320px" height="180px"  frameborder="0" allowfullscreen></iframe> -->
+        
+        
+        <div class="resp-container " id = "cikappa"><iframe   class="latestVideoEmbed"  vnum='1' cid="UChUpJC2Y_w_TNcPDucuVxtg"   frameborder="0" allowfullscreen></iframe></div>
+        <div class="resp-container"><iframe id = "youngtech"  style="display:none;" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ"  frameborder="0" allowfullscreen></iframe></div>
         </div>
-    
-    
-    
-    
+        
+
     <script>
 
    
@@ -115,36 +112,28 @@ praticamente quello che mi passa per la testa sul momento.</div>
     var youngtech = document.getElementById("youngtech")
     var cikappa = document.getElementById("cikappa")
     var yt = document.getElementbyClass("latestVideoEmbed")
-    var a = document.getElementbyId("ytcom")
-    var link;
+   
     function hideCikappa(){
     
     
     cikappa.style.display = "none";
     youngtech.style.display = "block";
+    cikappa.height = 0;
     document.body.style.backgroundColor = "#007eef"
-    link = youngtech.getAttribute("src");
-    link = link.replace('https://youtube.com/embed/', '')
-    link = link.replace('?controls=0&autoplay=0', '')
-    console.log(link)
-    a.setAttribute("href", "https://youtube.com/watch?v=" + link)
+    
     }
     
     
     
     function hideYoungTech(){
       
-      cikappa.style.display = "block";
+    cikappa.style.display = "block";
     youngtech.style.display = "none";
-    youngtech.muted=true;
-    cikappa.muted=false;
+  
+   
     document.body.style.backgroundColor = "#85170c"
 
-    link = cikappa.getAttribute("src");
-    link = link.replace('https://youtube.com/embed/', '')
-    link = link.replace('?controls=0&autoplay=0', '')
-    console.log(link)
-    a.setAttribute("href", "https://youtube.com/watch?v=" + link)
+  
     
     
     }
