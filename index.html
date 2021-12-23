@@ -1,168 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <title>Cikappa2904</title>
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="sidebar.css">
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
-    
 </head>
-<body>
-    
-
-
-<!-- navbar  -->
-
-<nav>
-    
-    <div class="nav-wrapper" >
-       
-        <a class="brand-logo" class="navbar" href="index.html" ><img src="images/logo_sec2.png" alt="Cikappa2904logo" height = auto; class="moveimage" style="width:50px"></a>
-                    
-       <a href="#" class="sidenav-trigger" data-target="mobile-links">
-           <i class="material-icons">menu</i>
-        </a>
-       <ul  class="right hide-on-med-and-down" >
-        <li><a href="social.html" class="navbar" >Social</a></li>
-        <li><a href="pixelmon.html" class="navbar" >Pixelmon</a></li>
-        <li><a href="report.html" class="navbar" >Riporta un problema</a></li>
-        
-
-    </ul>
-
-
-      
-    </div> 
-
-    
-</nav>
-
-<ul class="sidenav" id="mobile-links">
-    <li><a href="social.html" class="navbar" >Social</a></li>
-    <li><a href="pixelmon.html" class="navbar" >Pixelmon</a></li>
-    <li><a href="report.html" class="navbar" >Riporta un problema</a></li>
-</ul>
-<!-- navbar  -->
-<div class="content">
-
-<br>
-
-<div class="card-panel teal lighten-2">Ciao, mi chamo Claudio, ma su internet mi faccio conoscere come 
-    <b>Cikappa2904.</b>
-    <br>
-Non so neanche io che tipo di video mi piaccia fare su Youtube, 
-praticamente quello che mi passa per la testa sul momento.</div>
-            
-   
-<!-- Ultimo video e iscrizione -->
-
-<div class="content">
-
-    <h3 style="text-align: center; color:white; font-size:20wm" >I miei ultimi video</h2>
-    <p style=" display:block; color:white">(i video potrebbero non funzionare in questa pagina, in tal caso cliccare sul bottone YouTube(o nel titolo del video da cellulare) nel video per guardarlo direttamente su YouTube)</p>
-    
-    
-    
-    <a class="waves-effect waves-light btn-large red" onclick="hideYoungTech()" >Cikappa2904</a>
-    <a class="waves-effect waves-light btn-large blue" onclick="hideCikappa()" style="float: right">YoungTech</a>
-    <br>
-    
-    
-    
-    <br>
-        <!-- <iframe id = "youngtech"  style="display:none" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ" width="320px" height="180px"  frameborder="0" allowfullscreen></iframe> -->
-        
-        
-        <div class="resp-container " id = "cikappa"><iframe   class="latestVideoEmbed"  vnum='0' cid="UChUpJC2Y_w_TNcPDucuVxtg"   frameborder="0" allowfullscreen></iframe></div>
-        <div class="resp-container"><iframe id = "youngtech"  style="display:none;" class="latestVideoEmbed" vnum='0' cid="UCVrqEID_IoP-dIZGabAJDvQ"  frameborder="0" allowfullscreen></iframe></div>
+<body style="background-color: #D12626">
+    <nav class="navbar">
+        <div>
+            <img src="/images/youngtech.jpg" alt="LOGO" class="logo">
         </div>
-        
+        <svg onclick="a()" style="margin-top: 10px; margin-right:20px;" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        <div class="linkNavbar">
+            <a href="#" class="linkNav">Home</a>
+            <a href="#sezione2" class="linkNav">Youtube</a>
+            <a href="#sezione3" class="linkNav">Social</a>
+            <a href="#sezione4" class="linkNav">About</a>
+        </div>
+    </nav>
+    <div style="background-color: #921111;" >
+      <center>
+    <div class="hamburger" id="hamburger" style="padding: 2px; background-color: #D12626; width: 200px; border-radius: 15px;">
+      <a href="#" class="linkNav">Home</a><br>
+            <a href="#sezione2" class="linkNav">Youtube</a><br>
+            <a href="#sezione3" class="linkNav">Social</a><br>
+            <a href="#sezione4" class="linkNav">About</a>
+          </center>
+    </div>
+  </div>
+    <div class="sezione1">
+      <div class="section1">
+        <div class="testoSezione1">
+            <p><h2 style="font-size: 22px; font-weight: bold;" class="testoSection1_1">Ciao,</h2></p><br>
+            <p><h1 style="font-size: 60px; font-weight: bold;" class="testoSection1_2"><span class="auto-input" style="color: #333;"></span>,</h1></p><br>
+            <p><h3 style="font-size: 30px; font-weight: bold;" class="testoSection1_3">ma su internet mi faccio chiamare Cikappa 2904...</h3></p><br><br>
+            <a href="#sezione4" class="linkSezione1">Leggi</a>
+        </div>
+        <div>
+            <img src="/images/claudio.png" alt="CLAUDIO" class="immagineClaudio">
+        </div>
+      </div>
+    </div>
+
+    <div class="section2" id="sezione2">
+        <div class="youtube">
+            <a href="https://www.youtube.com/watch?v=rJZZyyfUsDs" class="ultimoVideo" target="_blank">Ultimo video</a>
+            <a href="https://www.youtube.com/watch?v=rJZZyyfUsDs" class="nomeVideo" target="_blank">Ho provato una versione CUSTOM di Windows 11 - Rectify 11 Overview ITA</a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rJZZyyfUsDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;"></iframe>
+        </div>
+    </div>
+    <div class="section3" id="sezione3">
+      <center>
+      <h2 class="hSocial">I miei social</h2>
+    </center>
+        <center>
+        <div class="card-container">
+            <div class="card">
+              <a href="#">
+                <div class="social-img">
+                  <img src="/images/Telegram.jpg" alt="telegram">
+                </div>
+                <div class="descrizione">
+                  <h2>Telegram</h2>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis laboriosam doloribus molestias commodi quis magni nihil pariatur ducimus voluptas. Nulla in esse dolore voluptate molestias ab adipisci sapiente fuga!</p><br><br>
+                  <a href="#" class="linkCard1">Unisciti al canale!</a><br><br>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="#">
+                <div class="social-img">
+                    <img src="/images/twitter2.png" alt="twitter" class="twitter">
+                </div>
+                <div class="descrizione">
+                  <h2>Twitter</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellat aspernatur, unde eius fuga error explicabo labore nostrum necessitatibus est facilis, id inventore pariatur omnis eligendi voluptate ratione animi cumque.
+                  </p><br><br>
+                  <a href="#" class="linkCard1">Seguimi su twitter!</a><br><br>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="#">
+                  <div class="social-img">
+                    <img src="/images/1112307.jpg" alt="insta">
+                  </div>
+                  <div class="descrizione">
+                    <h2>Instagram</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod libero enim. Ex, quasi veritatis? Deserunt nostrum, incidunt facere inventore iusto neque rerum, accusamus quam officiis amet pariatur voluptas recusandae?
+                    </p><br><br>
+                    <a href="#" class="linkCard1">Seguimi su instagram!</a><br><br>
+                  </div>
+                </a>
+              </div>       
+              </div>
+              </center> 
+              <center>
+              <div class="card-container-mobile">
+                <div class="card">
+                  <a href="#">
+                    <div class="social-img">
+                      <img src="/images/Telegram.jpg" alt="telegram">
+                    </div>
+                    <div class="descrizione">
+                      <h2>Telegram</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p><br><br>
+                      <a href="#" class="linkCard1">Unisciti al canale!</a><br><br>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="#">
+                    <div class="social-img">
+                        <img src="/images/twitter2.png" alt="twitter" class="twitter">
+                    </div>
+                    <div class="descrizione">
+                      <h2>Twitter</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellat 
+                      </p><br><br>
+                      <a href="#" class="linkCard1">Seguimi su twitter!</a><br><br>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card">
+                    <a href="#">
+                      <div class="social-img">
+                        <img src="/images/1112307.jpg" alt="insta">
+                      </div>
+                      <div class="descrizione">
+                        <h2>Instagram</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis 
+                        </p><br><br>
+                        <a href="#" class="linkCard1">Seguimi su instagram!</a><br><br>
+                      </div>
+                    </a>
+                  </div>     
+              </div>
+              </center> 
+    </div>
+
+    <div class="section4" id="sezione4">
+        <div class="about">
+            <div class="chiSono">
+              <div class="lineaSuperBellaEstetica"></div>
+              <h1 class="hAbout" style="box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);">Chi Sono</h1><br>
+              <h3 class="testoAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae fugit explicabo id, iusto sint excepturi reprehenderit, totam consequatur suscipit minus enim architecto sequi maiores ducimus, ut nulla ad dolorum impedit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores distinctio, doloribus porro modi molestias sed quod quasi accusantium praesentium aut officia nisi cupiditate maiores autem officiis aliquid, </h3>
+            </div>
+            <div>
+              <img src="/images/claudioAbout.png" alt="IMMAGINE DI ME STESSO" style="margin-top: 150px; border-radius: 20px; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);" class="immagineAbout">
+            </div>
+        </div>
+        <div class="footer">
+            <p class="pFooter">Creato da Dardan & Mario</p>
+            <p class="pFooter">© 2021 Tutti i diritti riservati a Cikappa2904</p>
+              <p class="pFooter">Fatto con HTML & CSS & JS puro</p>
+        </div>
+    </div>
 
     <script>
+       var typed = new Typed('.auto-input', {
+            strings: ['mi chiamo Claudio', 'sono uno youtuber',],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+            })
+    </script>
+    <script>
+      var sr = ScrollReveal();
+        sr.reveal('.card',{
+        origin: 'top',
+        distance: '40px',
+        duration:'2500',
+        reset:'true',
+        scale:'2,1',
+      });
 
-   
-    var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
-    var ytcom = document.getElementById("ytcom");
-    function loadVideo(iframe){
-        $.getJSON( reqURL + iframe.getAttribute('cid'),
-          function(data) {
-             var videoNumber = (iframe.getAttribute('vnum')?Number(iframe.getAttribute('vnum')):0);
-            console.log(videoNumber);
-             var link = data.items[videoNumber].link;
-             id = link.substr(link.indexOf("=") + 1);  
-             iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=0");
-             
-          }
-       );
-    }
-    var iframes = document.getElementsByClassName('latestVideoEmbed');
-    for (var i = 0, len = iframes.length; i < len; i++){
-           loadVideo(iframes[i]);
-           
-    }
-    var youngtech = document.getElementById("youngtech")
-    var cikappa = document.getElementById("cikappa")
-    var yt = document.getElementbyClass("latestVideoEmbed")
-   
-    function hideCikappa(){
-    
-    
-    cikappa.style.display = "none";
-    youngtech.style.display = "block";
-    cikappa.height = 0;
-    document.body.style.backgroundColor = "#007eef"
-    
-    }
-    
-    
-    
-    function hideYoungTech(){
-      
-    cikappa.style.display = "block";
-    youngtech.style.display = "none";
-  
-   
-    document.body.style.backgroundColor = "#85170c"
+      var sr = ScrollReveal();
+        sr.reveal('.auto-input',{
+        origin: 'top',
+        distance: '40px',
+        duration:'1000',
+        reset:'true',
+        scale:'2,1',
+      });
 
-  
-    
-    
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-  
+      var sr = ScrollReveal();
+        sr.reveal('.youtube',{
+        origin: 'top',
+        distance: '40px',
+        duration:'1500',
+        reset:'true',
+        scale:'2,1',
+      });
 
-        
-    // "width: 0; height: 0; border: 0; border: none; position: absolute;"
-    
-  
-
-</script>
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-
-    $('.sidenav').sidenav();
-
-    })
-</script>
-
+      var sr = ScrollReveal();
+        sr.reveal('.about',{
+        origin: 'top',
+        distance: '40px',
+        duration:'1500',
+        reset:'true',
+        scale:'2,1',
+      });
+    </script>
 </body>
 </html>
