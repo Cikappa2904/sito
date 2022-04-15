@@ -35,11 +35,11 @@ body{
     margin: 10px;
     font-size: 20px;
   }
-  
+
   .linkNav:hover {
     color: #fff;
   }
-  
+
   .linkNav::before {
     content: "";
     position: absolute;
@@ -52,7 +52,7 @@ body{
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
-  
+
   .linkNav:hover::before {
     transform: scaleX(1);
   }
@@ -105,7 +105,7 @@ body{
     align-items: center;
 }
 .nomeVideo{
-    margin-top: 20px; 
+    margin-top: 20px;
     margin-bottom: 45px;
 }
 .ultimoVideo{
@@ -116,31 +116,30 @@ body{
     border-radius: 10px;
     text-align: center;
 }
-.section3{
-    height: 100vh;
-    width: 100%;
-    background-color: #921111;
+.sezione3{
+
+
 }
-.card-container{
-    width: 90%;
-    margin: 50px;
-    padding: 2rem;
-    background-color: rgb(146, 17, 17);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.card-container-mobile{
-    display: none;
+.card_container{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+
 }
 .card{
-    width: 90%;
+    width: 400px;
     margin: 20px;
-    background-color: #D12626;
+    background-color: rgb(146, 17, 17);
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }
+.card:nth-child(1){
+  height:540px;
+}
+
 .social-img,
 .descrizione {
     width: 90%;
@@ -148,7 +147,7 @@ body{
 }
 .social-img {
     padding: 20px 15px;
-} 
+}
 .descrizione {
     padding: 15px 10px;
 }
@@ -162,7 +161,8 @@ body{
 a {
     color: white;
     text-decoration: none;
-    font-family: sans-serif;
+
+
 }
 .descrizione h2 {
     padding-bottom: 25px;
@@ -171,32 +171,46 @@ a {
     text-decoration: none;
     padding: 20px;
     margin-top: 10px;
-    background-color: rgb(146, 17, 17);
+    background-color: #D12626;
 }
+
+
 .hSocial{
+    text-align: center;
     text-decoration: none;
     padding: 20px;
     background-color: #333;
     border-radius: 10px;
     text-align: center;
-    position: relative;
-    top: 10px;
+  font-weight: 200;
     width: 30%;
+
 }
+
+
+
+
 .section4{
     width: 100%;
-    height: 70vh;
+    height: 500px;
     background-color: #D12626;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.testoAbout{
+  font-weight: 200;
+  font-size: 21px;
+  margin-top: 10px;
+}
 .about{
     display: flex;
     align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
     justify-content: space-around;
-    margin-top: 150px;
+    margin-top: 90px;
 }
 .hAbout{
     padding: 20px;
@@ -210,29 +224,37 @@ a {
 
 }
 .immagineAbout{
-
+margin-bottom: 50px;
 }
 .lineaSuperBellaEstetica{
     padding: 5px;
     background-color: #921111;
     width: 15%;
     margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+footer{
+  width: 100%;
+  text-align: center;
 }
 .footer{
-    padding: 20px;
-    background-color: #921111;
-    text-align: center;
-    border-radius:10px;
-    width: 100%;
-    margin-top: 275px;
+  padding: 15px;
+  background-color: #921111;
+  border-radius:10px;
+  font-weight: 200;
+
 }
 .pFooter{
-    font-size: 20px;
-    margin-bottom: 5px;
+  font-size: 18px;
+
 }
-.testoAbout{
-    font-size: 22px;
-}
+
+
+
+
+
+
 svg{
     display: none;
 }
