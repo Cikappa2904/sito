@@ -1,264 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Readex Pro', sans-serif;
-    color: #fff;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    overflow-x: hidden;
-    webkit-overflow-scrolling: touch;
-}
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #921111;
-}
-.logo{
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    margin-left: 50px;
-    margin-top: 10px;
-}
-.linkNavbar{
-    margin-right: 50px;
-    margin-top: 10px;
-}
-.linkNav {
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 20px;
-  }
-
-  .linkNav:hover {
-    color: #fff;
-  }
-
-  .linkNav::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    background-color: #fff;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-
-  .linkNav:hover::before {
-    transform: scaleX(1);
-  }
-.section1{
-    background-color: #921111;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.immagineClaudio{
-    margin-bottom: 200px;
-}
-.testoSezione1{
-    margin-bottom: 150px;
-    margin-left: 50px;
-}
-.linkSezione1{
-    text-decoration: none;
-    padding: 20px;
-    margin-top: 10px;
-    background-color: #D12626;
-    transition-duration: 0.7s;
-}
-.linkSezione1:hover{
-    letter-spacing: 5px;
-    transition-duration: 0.5s;
-}
-.section2{
-    width: 100%;
-    height: 100vh;
-    background-color: #D12626;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.youtube{
-    margin: 300px;
-    padding: 100px;
-    padding-top: 10px;
-    width: 800px;
-    border-radius: 15px;
-    width: 50%;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    background-color: rgb(146, 17, 17);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.nomeVideo{
-    margin-top: 20px;
-    margin-bottom: 45px;
-}
-.ultimoVideo{
-    text-decoration: none;
-    padding: 20px;
-    margin-bottom: 40px;
-    background-color: #333;
-    border-radius: 10px;
-    text-align: center;
-}
-.sezione3{
-
-
-}
-.card_container{
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-
-}
-.card{
-    width: 400px;
-    margin: 20px;
-    background-color: rgb(146, 17, 17);
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-}
-.card:nth-child(1){
-  height:540px;
-}
-
-.social-img,
-.descrizione {
-    width: 90%;
-    margin: 0 auto;
-}
-.social-img {
-    padding: 20px 15px;
-}
-.descrizione {
-    padding: 15px 10px;
-}
-.social-img img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-a {
-    color: white;
-    text-decoration: none;
-
-
-}
-.descrizione h2 {
-    padding-bottom: 25px;
-}
-.linkCard1{
-    text-decoration: none;
-    padding: 20px;
-    margin-top: 10px;
-    background-color: #D12626;
+    font-family: 'Raleway', sans-serif;
 }
 
 
-.hSocial{
-    text-align: center;
-    text-decoration: none;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    text-align: center;
-  font-weight: 200;
-    width: 30%;
-
+@media only screen and (max-width: 1024px) {
+    #link_nav{
+        display: none;
+    }
+    #card_container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
-
-
-.section4{
-    width: 100%;
-    height: 500px;
-    background-color: #D12626;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.testoAbout{
-  font-weight: 200;
-  font-size: 21px;
-  margin-top: 10px;
-}
-.about{
-    display: flex;
-    align-items: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    justify-content: space-around;
-    margin-top: 90px;
-}
-.hAbout{
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    width: 35%;
-    text-align: center;
-}
-.chiSono{
-    width: 50%;
-
-}
-.immagineAbout{
-margin-bottom: 50px;
-}
-.lineaSuperBellaEstetica{
-    padding: 5px;
-    background-color: #921111;
-    width: 15%;
-    margin-bottom: 20px;
-    border-radius: 5px;
+@media only screen and (min-width: 1024px) {
+    #menu_svg{
+        display: none;
+    }
+    #card{
+        width: 30vw;
+    }
 }
 
-footer{
-  width: 100%;
-  text-align: center;
-}
-.footer{
-  padding: 15px;
-  background-color: #921111;
-  border-radius:10px;
-  font-weight: 200;
-
-}
-.pFooter{
-  font-size: 18px;
-
-}
-
-
-
-
-
-
-svg{
-    display: none;
-}
-.hamburger{
-    display: none;
-}
+@media only screen and (max-width: 650px) {
+    #iframe{
+        display: none;
+    }
+    #linea{
+        width: 40%;
+        margin-left: 40px;
+    }
+    #chisono{
+        margin-left: 40px;
+    }
+    #text_about{
+        margin-left: 40px;
+    }
+} 
